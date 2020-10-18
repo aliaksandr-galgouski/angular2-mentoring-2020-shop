@@ -28,7 +28,7 @@ export class CartListComponent implements OnInit {
     this.updateCartItems();
   }
 
-  private updateCartItems() {
+  private updateCartItems(): void {
     this.items = this.cartService.getItems();
   }
 }
