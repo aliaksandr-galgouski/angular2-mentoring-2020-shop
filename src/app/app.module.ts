@@ -6,18 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 //#region Component imports
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
 //#endregion
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
+    ProductComponent,
+    ProductListComponent,
+    CartListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
