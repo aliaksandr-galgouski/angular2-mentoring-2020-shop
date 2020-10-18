@@ -9,5 +9,6 @@
   1.  ProductsService - has 'getProducts()' method that returns dummy products;
   2.  CartService - has 'getItems()' method that returns dummy items.
 - Added 'changelog.md' file;
+- Added Cart clear functional;
 
 P.S.: No project organization performed.

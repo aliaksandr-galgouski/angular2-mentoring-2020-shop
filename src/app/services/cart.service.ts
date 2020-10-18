@@ -18,9 +18,13 @@ export class CartService {
     DUMMY_PRODUCTS[3],
   ];
 
+  constructor() {}
+
   getItems(): Array<ProductModel> {
     return this.items;
   }
 
-  constructor() {}
+  clear(): void {
+    this.items = [];
+  }
 }

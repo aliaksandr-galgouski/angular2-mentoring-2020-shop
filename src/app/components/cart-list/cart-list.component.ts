@@ -19,6 +19,16 @@ export class CartListComponent implements OnInit {
   constructor(private readonly cartService: CartService) {}
 
   ngOnInit(): void {
+    this.updateCartItems();
+  }
+
+  onClickClearBtn(): void {
+    console.log('CartListComponent', 'Clear');
+    this.cartService.clear();
+    this.updateCartItems();
+  }
+
+  private updateCartItems() {
     this.items = this.cartService.getItems();
   }
 }
