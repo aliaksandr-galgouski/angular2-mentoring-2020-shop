@@ -1,3 +1,14 @@
+# Task 2
+
+- Created modules: **CoreModule**, **SharedModule**, **CartModule**, **ProductsModule**, **OrdersModule**.
+- Updated services: **CartService** - to notify componets via "Push" method, added total price calculation.
+- Added/Updated components: **CartItemComponet** & **ProductItemComponent** to use "OnPush" change detection strategy.
+- Addde directives: **ClickStopDirective**, **HighliteDirective**
+- Used life-cycle hooks: **OnInit**, **OnDestroy**, **AfterViewInit**
+- Used templateVariable to get accces to native HTML elemet and set app title in the **AppComponent**.
+- Used class(ngClass) & style(ngStyle) directives in the **AppComponent**.
+- Updated UI.
+
 # Task 1
 
 - Created components:

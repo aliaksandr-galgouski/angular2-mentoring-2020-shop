@@ -1,0 +1,28 @@
+<div
+  class="list-group-item d-flex justify-content-between align-items-center"
+  highlight="var(--very-lightgray-color)"
+>
+  <h5 class="mb-0">{{ item.product.name }}</h5>
+  <div>
+    <span class="px-2">
+      Price: <strong>${{ item.product.price }}</strong> x {{ item.quantity }}
+    </span>
+    <div class="btn-group">
+      <button
+        class="btn btn-outline-secondary"
+        (click.stop)="onIncreaseQuantity()"
+      >
+        +
+      </button>
+      <button
+        class="btn btn-outline-secondary"
+        (click.stop)="onDicreaseQuantity()"
+      >
+        -
+      </button>
+      <button class="btn btn-outline-secondary" (click.stop)="onRemove()">
+        X
+      </button>
+    </div>
+  </div>
+</div>
