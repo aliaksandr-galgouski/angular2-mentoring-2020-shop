@@ -1,9 +1,9 @@
-<app-first></app-first>
-<hr />
-<app-product></app-product>
-<hr />
-<app-product-list></app-product-list>
-<hr />
-<app-cart-list></app-cart-list>
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <h1 #appTitle [class]="titleClasses" [style]="titleStyles"></h1>
+  <hr />
+  <app-product-list></app-product-list>
+  <hr />
+  <app-cart-list></app-cart-list>
+  <hr />
+  <router-outlet></router-outlet>
+</div>
