@@ -1,3 +1,6 @@
+// это вы для какого-то инструмента так комментируете или для себя?
+// Обычно разделяют пустой строкой
+
 //#region Angular imports
 import { Injectable } from '@angular/core';
 //#endregion
