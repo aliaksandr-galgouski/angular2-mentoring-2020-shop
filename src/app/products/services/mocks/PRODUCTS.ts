@@ -29,8 +29,16 @@ export const DUMMY_PRODUCTS: Array<ProductModel> = [
     id: 4,
     name: 'Product 4',
     description: 'Description for Product 4.',
-    categories: [],
+    categories: [ProductCategory.Second],
     price: 4,
     isAvailable: false,
+  },
+  {
+    id: 5,
+    name: 'Product 5',
+    description: 'Description for Product 5.',
+    categories: [ProductCategory.Thrid],
+    price: 5,
+    isAvailable: true,
   },
 ];
