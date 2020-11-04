@@ -1,3 +1,13 @@
+# Task 3
+
+- Added services: **ConfigOptionsService**, **Constants**, **GeneratorService**, **LocalStorageService**.
+- Added directives: **ApplyStylesDirective** that uses **Renderrer2** to manipulate DOM.
+- Added components: **FirsComponet** to test injection methods.
+- Updated services: **CartService**.
+- Updated components: **CartItemComponet** & **CartListComponent**.
+- Used derective **ApplyStylesDirective** on app title to chage styles on click event.
+- Minor updated of UI.
+
 # Task 2
 
 - Created modules: **CoreModule**, **SharedModule**, **CartModule**, **ProductsModule**, **OrdersModule**.
