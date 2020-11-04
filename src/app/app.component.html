@@ -1,5 +1,10 @@
 <div class="container-fluid">
-  <h1 #appTitle [class]="titleClasses" [style]="titleStyles"></h1>
+  <h1
+    #appTitle
+    [class]="titleClasses"
+    [style]="titleStyles"
+    [apply-styles]="titleStylesOnClick"
+  ></h1>
   <hr />
   <app-product-list></app-product-list>
   <hr />

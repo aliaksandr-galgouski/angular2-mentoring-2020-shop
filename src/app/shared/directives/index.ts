@@ -1,4 +1,3 @@
-import { HighlightDirective } from './highlight.directive';
-import { ClickStopDirective } from './click-stop.directive';
-
-export default [HighlightDirective, ClickStopDirective];
+export * from './highlight.directive';
+export * from './click-stop.directive';
+export * from './apply-styles.directive';
