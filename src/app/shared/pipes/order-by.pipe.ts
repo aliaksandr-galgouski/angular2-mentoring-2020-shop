@@ -10,13 +10,15 @@ export class OrderByPipe implements PipeTransform {
     propertySelector: string,
     descending: boolean = true
   ): Array<T> {
-    if (!(array instanceof Array && array.length)) return [];
+    if (!(array instanceof Array && array.length)) {
+      return [];
+    }
     const multipler = descending ? -1 : 1;
 
     const getValue = (object: T, selector: string): any => {
       const keys = selector.split('.');
-      for (var i = 0; i < keys.length; i++) {
-        object = object[keys[i]];
+      for (const key of keys) {
+        object = object[key];
       }
 
       return object;
