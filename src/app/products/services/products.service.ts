@@ -17,8 +17,9 @@ import { DUMMY_PRODUCTS } from './mocks/PRODUCTS';
 export class ProductsService {
   constructor() {}
 
-  getProducts(): Array<ProductModel> {
-    return [...DUMMY_PRODUCTS];
+  getProducts(): Promise<Array<ProductModel>> {
+    const products = [...DUMMY_PRODUCTS];
+    return Promise.resolve(products);
   }
 
   getProduct(id: number): ProductModel {
