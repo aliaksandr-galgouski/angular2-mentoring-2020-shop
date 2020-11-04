@@ -19,6 +19,7 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   items: CartItemModel[];
   totalPrice: number;
+  totalQuantity: number;
 
   get hasItems(): boolean {
     return this.items.length > 0;
@@ -32,6 +33,7 @@ export class CartListComponent implements OnInit, OnDestroy {
       (cart: CartModel) => {
         this.items = cart.items;
         this.totalPrice = cart.totalPrice;
+        this.totalQuantity = cart.totalQuantity;
       }
     );
   }
@@ -42,17 +44,17 @@ export class CartListComponent implements OnInit, OnDestroy {
   //#endregion
 
   onRemoveAll(): void {
-    this.cartService.removeAllItems();
+    this.cartService.removeAllProducts();
   }
 
   onRemoveProduct(item: CartItemModel): void {
-    this.cartService.removeProduct(item.product, true);
+    this.cartService.removeProduct(item.product);
   }
 
   onIncreaseQuantityOfProduct(item: CartItemModel): void {
-    this.cartService.addProduct(item.product);
+    this.cartService.increaseQuantity(item.product);
   }
   onDicreaseQuantityOfProduct(item: CartItemModel): void {
-    this.cartService.removeProduct(item.product);
+    this.cartService.decreaseQuantity(item.product);
   }
 }
