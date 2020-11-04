@@ -1,3 +1,16 @@
+# Task 4
+
+- Updated services: **ProductService**, **ProductService**,.
+- Added pipes: **OrderByPipe**.
+- Used pipes:
+  - **AsyncPipe** - in the **ProductListComponent** to transform Promise result;
+  - **UpperCasePipe** - in the **ProductComponent** to transform product categories;
+  - **TitleCasePipe** in the **AppComponent** to transform app title fom component class;
+  - **CurrnecyPipe** - in **ProductComponent**, **CartItemComponet**, **CartListComponent**;
+  - **OrderByPipe** - in the **CartListComponent** to order cart items;
+- Performed reorganization of module imports.
+- Minor fixes of UI and code.
+
 # Task 3
 
 - Added services: **ConfigOptionsService**, **Constants**, **GeneratorService**, **LocalStorageService**.
