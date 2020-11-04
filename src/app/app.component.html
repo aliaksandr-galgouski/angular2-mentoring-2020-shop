@@ -1,9 +1,16 @@
 <div class="container-fluid">
-  <h1 #appTitle [class]="titleClasses" [style]="titleStyles"></h1>
+  <h1
+    #appTitle
+    [class]="titleClasses"
+    [style]="titleStyles"
+    [apply-styles]="titleStylesOnClick"
+  ></h1>
   <hr />
   <app-product-list></app-product-list>
   <hr />
   <app-cart-list></app-cart-list>
+  <hr />
+  <app-first></app-first>
   <hr />
   <router-outlet></router-outlet>
 </div>

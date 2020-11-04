@@ -3,12 +3,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //#endregion
 //#region Directive imports
-import directives from './directives';
+import {
+  HighlightDirective,
+  ClickStopDirective,
+  ApplyStylesDirective,
+} from './directives';
 //#endregion
+
+const directives = [
+  HighlightDirective,
+  ClickStopDirective,
+  ApplyStylesDirective,
+];
 
 @NgModule({
   declarations: [...directives],
-  imports: [CommonModule],
   exports: [...directives],
+  imports: [CommonModule],
 })
 export class SharedModule {}
