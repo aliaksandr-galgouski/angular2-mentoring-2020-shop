@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 //#endregion
 //#region Module imports
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { CartModule } from './cart/cart.module';
 import { ProductsModule } from './products/products.module';
 import { OrdersModule } from './orders/orders.module';
@@ -19,8 +19,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
     SharedModule,
+    CoreModule,
     CartModule,
     ProductsModule,
     OrdersModule,

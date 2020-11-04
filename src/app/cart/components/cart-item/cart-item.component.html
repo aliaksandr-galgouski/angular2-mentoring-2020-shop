@@ -5,7 +5,8 @@
   <h5 class="mb-0">{{ item.product.name }}</h5>
   <div>
     <span class="px-2">
-      Price: <strong>${{ item.product.price }}</strong> x {{ item.quantity }}
+      Price: <strong>{{ item.product.price | currency: "USD" }}</strong> x
+      {{ item.quantity }}
     </span>
     <div class="btn-group">
       <button

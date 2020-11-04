@@ -4,14 +4,14 @@
       {{ product.name }}
     </h5>
     <h6 class="card-subtitle mb-3 text-muted">
-      {{ product.categories.join(", ") }}
+      {{ product.categories.join(", ") | uppercase }}
     </h6>
     <p class="card-text">
       {{ product.description }}
     </p>
   </div>
   <div class="card-footer d-flex justify-content-between align-items-center">
-    <strong class="px-2">${{ product.price }}</strong>
+    <strong class="px-2">{{ product.price | currency: "USD" }}</strong>
     <div class="btn-group">
       <button
         class="btn btn-primary"

@@ -1,10 +1,12 @@
 //#region Angular imports
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+//#endregion
+//#region Module imports
+import { SharedModule } from '../shared/shared.module';
 //#endregion
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule],
+  imports: [SharedModule],
 })
 export class OrdersModule {}

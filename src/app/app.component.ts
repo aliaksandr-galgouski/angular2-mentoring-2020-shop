@@ -1,4 +1,5 @@
 //#region Angular imports
+import { TitleCasePipe } from '@angular/common';
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 //#endregion
 
@@ -6,6 +7,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [TitleCasePipe],
 })
 export class AppComponent implements AfterViewInit {
   titleClasses: any = { 'text-center': true };
@@ -18,9 +20,11 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild('appTitle') titleRef: ElementRef<HTMLElement>;
 
-  constructor() {}
+  constructor(private titleCasePipe: TitleCasePipe) {}
 
   ngAfterViewInit(): void {
-    this.titleRef.nativeElement.textContent = 'Shop, Click me!';
+    const title = 'shop, click me!';
+    const element = this.titleRef.nativeElement;
+    element.textContent = this.titleCasePipe.transform(title);
   }
 }

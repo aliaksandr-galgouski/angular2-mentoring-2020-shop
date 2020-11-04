@@ -15,7 +15,6 @@ export class HighlightDirective {
   }
 
   @HostListener('mouseenter') onMouseEnter(): void {
-    console.log(this.highlightColor);
     this.backgroundColor = this.highlightColor;
   }
 

@@ -9,6 +9,13 @@ import { CartService } from '../../services';
 import { CartItemModel, CartModel } from '../../models';
 //#endregion
 
+const ORDER_VARIANTS = [
+  { name: 'Name', selector: 'product.name' },
+  { name: 'Price', selector: 'product.price' },
+  { name: 'Total price', selector: 'totalPrice' },
+  { name: 'Quantity', selector: 'quantity' },
+];
+
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
@@ -21,6 +28,10 @@ export class CartListComponent implements OnInit, OnDestroy {
   totalPrice: number;
   totalQuantity: number;
 
+  orderByVariants = ORDER_VARIANTS;
+  orderByDescending: boolean;
+  orderByProperty: string;
+
   get hasItems(): boolean {
     return this.items.length > 0;
   }
@@ -29,6 +40,9 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   //#region Hooks
   ngOnInit(): void {
+    this.orderByProperty = this.orderByVariants[0].selector;
+    this.orderByDescending = true;
+
     this.cartSubscription = this.cartService.cart$.subscribe(
       (cart: CartModel) => {
         this.items = cart.items;
