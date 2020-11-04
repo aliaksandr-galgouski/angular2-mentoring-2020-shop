@@ -82,7 +82,7 @@ export class CartService {
     this.updateCart();
   }
 
-  private updateCart() {
+  private updateCart(): void {
     const items = this.getItems();
     const totalPrice = this.calculateTotalPrice(items);
     const totalQuantity = this.calculateTotalQuantity(items);

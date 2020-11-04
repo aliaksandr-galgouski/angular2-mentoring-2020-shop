@@ -1,4 +1,6 @@
+//#region Angular imports
 import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
+//#endregion
 
 @Directive({
   // tslint:disable-next-line

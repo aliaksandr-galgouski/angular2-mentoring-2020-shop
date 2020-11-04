@@ -10,7 +10,11 @@ import {
 } from './directives';
 //#endregion
 
-var directives = [HighlightDirective, ClickStopDirective, ApplyStylesDirective];
+const directives = [
+  HighlightDirective,
+  ClickStopDirective,
+  ApplyStylesDirective,
+];
 
 @NgModule({
   declarations: [...directives],

@@ -1,3 +1,4 @@
+//#region Angular imports
 import {
   Directive,
   ElementRef,
@@ -5,6 +6,7 @@ import {
   Input,
   Renderer2,
 } from '@angular/core';
+//#endregion
 
 @Directive({
   // tslint:disable-next-line

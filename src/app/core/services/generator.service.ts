@@ -12,7 +12,7 @@ export class GeneratorService {
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charsLength = chars.length;
 
-    for (var i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
       result += chars.charAt(Math.floor(Math.random() * charsLength));
     }
 
@@ -21,7 +21,7 @@ export class GeneratorService {
 }
 
 export function GeneratorFactory(n: number): any {
-  return function (service: GeneratorService): string {
+  return (service: GeneratorService): string => {
     return service.generate(n);
   };
 }
