@@ -1,6 +1,5 @@
 //#region Angular imports
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 //#endregion
 //#region Module imports
 import { SharedModule } from '../shared/shared.module';
@@ -11,7 +10,7 @@ import { CartListComponent, CartItemComponent } from './components';
 
 @NgModule({
   declarations: [CartListComponent, CartItemComponent],
-  imports: [CommonModule, SharedModule],
+  imports: [SharedModule],
   exports: [CartListComponent],
 })
 export class CartModule {}

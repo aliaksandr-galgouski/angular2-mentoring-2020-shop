@@ -8,6 +8,11 @@ import {
   ClickStopDirective,
   ApplyStylesDirective,
 } from './directives';
+
+//#endregion
+//#region Pipe imports
+import { OrderByPipe } from './pipes';
+import { FormsModule } from '@angular/forms';
 //#endregion
 
 const directives = [
@@ -15,10 +20,13 @@ const directives = [
   ClickStopDirective,
   ApplyStylesDirective,
 ];
+const pipes = [OrderByPipe];
+
+const modules = [CommonModule, FormsModule];
 
 @NgModule({
-  declarations: [...directives],
-  exports: [...directives],
-  imports: [CommonModule],
+  declarations: [...directives, ...pipes],
+  exports: [...modules, ...directives, ...pipes],
+  imports: [...modules],
 })
 export class SharedModule {}

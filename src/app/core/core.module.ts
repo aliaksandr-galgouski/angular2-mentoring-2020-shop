@@ -1,6 +1,8 @@
 //#region Angular imports
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+//#endregion
+//#region Module imports
+import { SharedModule } from '../shared/shared.module';
 //#endregion
 //#region Services imports
 import {
@@ -19,7 +21,7 @@ import { FirstComponent } from './components/first/first.component';
 @NgModule({
   declarations: [FirstComponent],
   exports: [FirstComponent],
-  imports: [CommonModule],
+  imports: [SharedModule],
   providers: [
     { provide: LocalStorageService, useClass: LocalStorageService },
     { provide: ConstantsToken, useValue: APP_CONSTANTS },

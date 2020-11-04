@@ -3,7 +3,7 @@
     <h4 class="card-title mb-0">Products</h4>
   </div>
   <div class="card-body d-flex flex-wrap">
-    <ng-container *ngFor="let product of products">
+    <ng-container *ngFor="let product of products | async">
       <app-product
         class="block w-25 p-1"
         [product]="product"

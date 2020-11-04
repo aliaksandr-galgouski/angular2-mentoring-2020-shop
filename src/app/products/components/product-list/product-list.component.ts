@@ -15,7 +15,7 @@ import { ProductModel } from '../../models';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  products: Array<ProductModel>;
+  products: Promise<Array<ProductModel>>;
 
   constructor(
     private readonly cartService: CartService,
